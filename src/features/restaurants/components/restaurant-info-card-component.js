@@ -5,6 +5,7 @@ import styled from "styled-components/native";
 
 const Title = styled.Text`
   padding: 16px;
+  color: ${(props) => props.theme.colors.ui.primary};
 `;
 
 const RestaurantCard = styled(Card)`
@@ -30,10 +31,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
   } = restaurant;
   return (
     <RestaurantCard elevation={5}>
-      <RestaurantCardCover
-        key={name}
-        source={{ uri: photos[0] }}
-      />
+      <RestaurantCardCover key={name} source={{ uri: photos[0] }} />
       <Title>{name}</Title>
     </RestaurantCard>
   );
