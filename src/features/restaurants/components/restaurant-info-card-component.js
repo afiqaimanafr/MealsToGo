@@ -35,6 +35,22 @@ const Rating = styled.View`
   padding-top: ${(props) => props.theme.space[2]};
   padding-bottom: ${(props) => props.theme.space[2]};
 `;
+
+const Section = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
+
+const SectionEnd = styled.View`
+  flex: 1;
+  flex-direction: row;
+  justify-content: flex-end;
+`;
+
+const Open = styled(SvgXml)`
+  flex-direction: row;
+`;
+
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
     name = "Some Restaurant",
