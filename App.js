@@ -12,12 +12,12 @@ import {
 export default function App() {
   return (
     <>
-      <SafeAreaView style={{ flex: 1, marginTop: StatusBar.currentHeight }}>
-        <View style={{ padding: 16, backgroundColor: "green" }}>
-          <Text style={{ color: "white" }}>Search</Text>
+      <SafeAreaView style={styles.container}>
+        <View style={styles.search}>
+          <Text style={styles.text}>Search</Text>
         </View>
-        <View style={{ flex: 1, padding: 16, backgroundColor: "blue" }}>
-          <Text style={{ color: "white" }}>List</Text>
+        <View style={styles.list}>
+          <Text style={styles.text}>List</Text>
         </View>
       </SafeAreaView>
       <ExpoStatusBar style="auto" />
@@ -25,4 +25,21 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: StatusBar.currentHeight,
+  },
+  search: {
+    padding: 16,
+    backgroundColor: "green",
+  },
+  list: {
+    flex: 1,
+    padding: 16,
+    backgroundColor: "blue",
+  },
+  text: {
+    color: "white",
+  },
+});
