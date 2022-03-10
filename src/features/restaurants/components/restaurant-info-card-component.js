@@ -2,7 +2,7 @@ import React from "react";
 import { Text, StyleSheet } from "react-native";
 import { Card } from "react-native-paper";
 
-export const RestaurantInfo = ({ restaurant = {} }) => {
+export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
     name = "Some Restaurant",
     icon,
@@ -15,7 +15,7 @@ export const RestaurantInfo = ({ restaurant = {} }) => {
     isClosedTemporarily,
   } = restaurant;
   return (
-    <Card elevation={10} style={styles.card}>
+    <Card elevation={5} style={styles.card}>
       <Card.Cover key={name} style={styles.cover} source={{ uri: photos[0] }} />
       <Text style={styles.title}>{name}</Text>
     </Card>
