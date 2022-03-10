@@ -15,13 +15,9 @@ export const RestaurantInfo = ({ restaurant = {} }) => {
     isClosedTemporarily,
   } = restaurant;
   return (
-    <Card elevation={5} style={styles.card}>
-      <Card.Cover
-        key={name}
-        style={StyleSheet.cover}
-        source={{ uri: photos[0] }}
-      />
-      <Text>{name}</Text>
+    <Card elevation={10} style={styles.card}>
+      <Card.Cover key={name} style={styles.cover} source={{ uri: photos[0] }} />
+      <Text style={styles.title}>{name}</Text>
     </Card>
   );
 };
@@ -29,4 +25,5 @@ export const RestaurantInfo = ({ restaurant = {} }) => {
 const styles = StyleSheet.create({
   card: { backgroundColor: "white" },
   cover: { padding: 20, backgroundColor: "white" },
+  title: { padding: 16 },
 });
