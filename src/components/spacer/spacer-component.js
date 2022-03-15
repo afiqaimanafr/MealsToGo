@@ -3,11 +3,35 @@ import { View } from "react-native";
 import styled from "styled-components/native";
 
 const TopSmall = styled.View`
-  margintop: 4px;
+  margin-top: 4px;
+`;
+
+const TopMedium = styled.View`
+  margin-top: 8px;
+`;
+
+const TopLarge = styled.View`
+  margin-top: 16px;
+`;
+
+const LeftSmall = styled.View`
+  margin-left: 4px;
+`;
+
+const LeftMedium = styled.View`
+  margin-left: 8px;
+`;
+
+const LeftLarge = styled.View`
+  margin-left: 16px;
 `;
 
 export const Spacer = ({ variant }) => {
-  switch (variant) {
-    default:
+  if (variant === "top.medium") {
+    return <TopMedium />;
   }
+  if (variant === "top.large") {
+    return <TopLarge />;
+  }
+  return <TopSmall />;
 };
