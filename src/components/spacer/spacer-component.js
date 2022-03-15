@@ -33,5 +33,14 @@ export const Spacer = ({ variant }) => {
   if (variant === "top.large") {
     return <TopLarge />;
   }
+  if (variant === "left.small") {
+    return <LeftSmall />;
+  }
+  if (variant === "left.medium") {
+    return <LeftMedium />;
+  }
+  if (variant === "left.large") {
+    return <LeftLarge />;
+  }
   return <TopSmall />;
 };
